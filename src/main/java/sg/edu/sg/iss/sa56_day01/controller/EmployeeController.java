@@ -30,12 +30,12 @@ public class EmployeeController {
     
     @GetMapping(value="/list")
     //@GetMapping(value="/")
-    public @ResponseBody List<Employee> b(){
+    public @ResponseBody List<Employee> getEveryone(){
         return empSvc.getallEmployees();
     }
 
     @GetMapping(value="/filteredList")
-    public @ResponseBody List<Employee> a(){
+    public @ResponseBody List<Employee> getEmployeeByLName(){
         return empSvc.getEmployeesbyLastName("Lin");
     }
 }
